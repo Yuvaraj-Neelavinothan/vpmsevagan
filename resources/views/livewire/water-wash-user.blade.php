@@ -22,7 +22,7 @@
                             <div class="mb-4 flex items-center justify-between gap-4">
                                 <span
                                     class="me-2 rounded bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 dark:bg-gray-900 dark:text-gray-300">
-                                    Up to {{ $wash->offer_percentage }}% off </span>
+                                    Up to {{ number_format($wash->offer_percentage, 0) }}% off </span>
 
                                 <div class="flex items-center justify-end gap-1">
                                     <button type="button" data-tooltip-target="tooltip-quick-look{{ $wash->id }}"
@@ -127,7 +127,7 @@
 
                             <div class="mt-4 flex items-center justify-between gap-4">
                                 <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">
-                                    &#8377;{{ $wash->original_price }}</p>
+                                    &#8377;{{ number_format($wash->original_price, 0) }}</p>
                                 <button type="button" wire:click='add_to_cart({{ $wash }})'
                                     class="inline-flex items-center rounded-lg bg-gray-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4  focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                                     <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true"

@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class ProWorkerUser extends Component
+class ProWorkerUser extends HeaderNavUser
 {
     public function render()
     {

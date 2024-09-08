@@ -21,19 +21,25 @@ class HeaderNavUser extends Component
     #[Session]
     public $cart_counter;
 
-    public $cart_items;
+    public $cart_items, $customer;
 
-    public function __construct()
+    public function mount()
     {
-        $this->cart_counter = 0;
+        $this->customer = Auth::guard('customer')->user();
+        if ($this->customer) {
+            $this->cart_items = AddToCart::where('customer_id', $this->customer->id)->get();
+            $this->cart_counter = $this->cart_items->count();
+        } else {
+            $this->cart_counter = 0;
+            $this->cart_items = collect();
+        }
     }
     public function add_to_cart($cart_item)
     {
-        $customer = Auth::guard('customer')->user();
-        if ($customer) {
+        if ($this->customer) {
             try {
                 AddToCart::updateorcreate([
-                    'customer_id' => $customer->id,
+                    'customer_id' => $this->customer->id,
                     'service_category' => $cart_item['service_type'],
                     'service_code' => $cart_item['service_code'],
                     'service_name' => $cart_item['service_name'],
@@ -133,7 +139,7 @@ class HeaderNavUser extends Component
 
     public function remove_from_cart($s_code)
     {
-        $r_item = AddToCart::where('customer_id', 1)->where('service_code', $s_code)->first();
+        $r_item = AddToCart::where('customer_id', $this->customer->id)->where('service_code', $s_code)->first();
         $r_item->delete();
         $this->dispatch('decrease_counter');
     }
@@ -179,7 +185,6 @@ class HeaderNavUser extends Component
     }
     public function render()
     {
-        $this->cart_items = AddToCart::where('customer_id', 1)->get();
         return view('livewire.header-nav-user', ['cart_items' => $this->cart_items, 'cart_counter' => $this->cart_counter]);
     }
 }

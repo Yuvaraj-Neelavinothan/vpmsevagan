@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class OtherServiceUser extends Component
+class OtherServiceUser extends HeaderNavUser
 {
     public function render()
     {

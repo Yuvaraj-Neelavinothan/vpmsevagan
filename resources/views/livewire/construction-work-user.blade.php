@@ -5,7 +5,8 @@
             <!-- Heading & Filters -->
             <div class="mb-4 items-end justify-between space-y-4 sm:flex sm:space-y-0">
                 <div class="flex justify-center mx-auto mt-16 md:mt-10">
-                    <h1 class="mt-5 text-2xl font-extrabold text-gray-400 dark:text-white sm:text-2xl">Construction Material
+                    <h1 class="mt-5 text-2xl font-extrabold text-gray-400 dark:text-white sm:text-2xl">Construction
+                        Material
                         Services</h1>
                 </div>
             </div>
@@ -22,7 +23,7 @@
                             <div class="mb-4 flex items-center justify-between gap-4">
                                 <span
                                     class="me-2 rounded bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 dark:bg-gray-900 dark:text-gray-300">
-                                    Up to {{ $material->offer_percentage }}% off </span>
+                                    Up to {{ number_format($material->offer_percentage, 0) }}% off </span>
 
                                 <div class="flex items-center justify-end gap-1">
                                     <button type="button" data-tooltip-target="tooltip-quick-look{{ $material->id }}"
@@ -127,8 +128,8 @@
 
                             <div class="mt-4 flex items-center justify-between gap-4">
                                 <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">
-                                    &#8377;{{ $material->original_price }}</p>
-                                <button type="button"
+                                    &#8377;{{ number_format($material->original_price, 0) }}</p>
+                                <button type="button" wire:click='add_to_cart({{ $material }})'
                                     class="inline-flex items-center rounded-lg bg-gray-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4  focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                                     <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24"
