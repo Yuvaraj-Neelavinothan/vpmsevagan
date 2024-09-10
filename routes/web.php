@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SuperAdminController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,8 @@ Route::get('/house-keeping', [HomeController::class, 'house_keeping'])->name('ho
 Route::get('/water-wash', [HomeController::class, 'water_wash'])->name('water_wash');
 Route::get('/construction-work', [HomeController::class, 'construction_work'])->name('construction_work');
 Route::get('/other-services', [HomeController::class, 'other_services'])->name('other_services');
+// footer
+Route::get('/about-us', [FooterController::class, 'about_us'])->name('aboutUs');
 
 // Admin login
 Route::get('/admin', [SuperAdminController::class, 'admin_login'])->name('adminLogin')->middleware('guest');

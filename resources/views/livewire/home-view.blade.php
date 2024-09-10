@@ -77,7 +77,7 @@
                                 alt="product image" />
                         </a>
 
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -87,7 +87,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -102,7 +102,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/kitchen.jpg') }}"
                                 alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -112,7 +112,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -127,7 +127,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/kitchen_sink.jpeg') }}"
                                 alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -137,7 +137,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -152,7 +152,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/bathroom.jpg') }}"
                                 alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -162,7 +162,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -177,7 +177,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/toilet.jpeg') }}"
                                 alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -187,7 +187,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -202,7 +202,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/urine_basin.jpg') }}"
                                 alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -212,7 +212,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -227,7 +227,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/bathtub.jpg') }}"
                                 alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -237,7 +237,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -252,7 +252,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/water_tank.jpg') }}"
                                 alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -262,7 +262,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -277,7 +277,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/wash_basin.jpeg') }}"
                                 alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -287,7 +287,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <!-- Add more items as needed -->
@@ -323,9 +323,9 @@
                                     stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                             </svg>
                         </a>
-                        <button type="button"
+                        {{-- <button type="button"
                             class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Book
-                            Now</button>
+                            Now</button> --}}
                     </div>
                 </div>
             </div>
@@ -361,7 +361,7 @@
                                     your bike the care it deserves with our top-notch water service. Our team of experts
                                     ensures your bike looks spotless and runs smoothly."
                                 </p>
-                                <div class="flex justify-between items-center">
+                                {{-- <div class="flex justify-between items-center">
                                     <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                         &#8377;599
                                     </span>
@@ -369,7 +369,7 @@
                                         class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-xs md:text-sm px-2 md:px-2 py-1 text-center">
                                         Book Now
                                     </button>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -388,7 +388,7 @@
                                     "Keep your car looking pristine with our professional car water service. We provide
                                     a comprehensive clean that leaves your vehicle sparkling inside and out."
                                 </p>
-                                <div class="flex justify-between items-center">
+                                {{-- <div class="flex justify-between items-center">
                                     <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                         &#8377;599
                                     </span>
@@ -396,7 +396,7 @@
                                         class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-xs md:text-sm px-2 md:px-2 py-1 text-center">
                                         Book Now
                                     </button>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -434,7 +434,7 @@
                                 src="{{ asset('images/bricks.jpg') }}" alt="product image" />
                         </a>
 
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -444,7 +444,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -459,7 +459,7 @@
                             <img class="p-2 w-full h-24 md:h-48 rounded-[1rem]"
                                 src="{{ asset('images/hollowbricks.jpeg') }}" alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -469,7 +469,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -484,7 +484,7 @@
                             <img class="p-2 w-full h-24 md:h-48 rounded-[1rem]"
                                 src="{{ asset('images/m-sand.jpg') }}" alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -494,7 +494,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -509,7 +509,7 @@
                             <img class="p-2 w-full h-24 md:h-48 object-cover rounded-[1rem]"
                                 src="{{ asset('images/p-sand.jpg') }}" alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -519,7 +519,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="item mx-1">
@@ -534,7 +534,7 @@
                             <img class="p-2 w-full h-24 md:h-48 rounded-[1rem]"
                                 src="{{ asset('images/jalli.jpeg') }}" alt="product image" />
                         </a>
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -544,7 +544,7 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <!-- Add more items as needed -->
@@ -598,7 +598,7 @@
                                     team provides a deep and effective clean, ensuring your septic tank remains
                                     environmentally safe."
                                 </p>
-                                <div class="flex justify-between items-center">
+                                {{-- <div class="flex justify-between items-center">
                                     <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                         &#8377;599
                                     </span>
@@ -606,7 +606,7 @@
                                         class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-xs md:text-sm px-2 md:px-2 py-1 text-center">
                                         Book Now
                                     </button>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -625,7 +625,7 @@
                                     "Turn your scrap into value with our scrap collecting services. We provide
                                     hassle-free collection and ensuring your space is clean and clutter-free."
                                 </p>
-                                <div class="flex justify-between items-center">
+                                {{-- <div class="flex justify-between items-center">
                                     <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                         &#8377;599
                                     </span>
@@ -633,7 +633,7 @@
                                         class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-xs md:text-sm px-2 md:px-2 py-1 text-center">
                                         Book Now
                                     </button>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
