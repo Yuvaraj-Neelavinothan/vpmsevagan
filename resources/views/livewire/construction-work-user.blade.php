@@ -129,7 +129,8 @@
                             <div class="mt-4 flex items-center justify-between gap-4">
                                 <p class="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">
                                     &#8377;{{ number_format($material->original_price, 0) }}</p>
-                                <button type="button" wire:click='add_to_cart({{ $material }})'
+                                <button type="button"
+                                    wire:click='add_to_cart("{{ $material->service_category }}","{{ $material->material_code }}"," {{ $material->material_name }}"," {{ $material->original_price }}")'
                                     class="inline-flex items-center rounded-lg bg-gray-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4  focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                                     <svg class="-ms-2 me-2 h-5 w-5" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24"

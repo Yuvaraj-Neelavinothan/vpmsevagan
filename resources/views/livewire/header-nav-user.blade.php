@@ -554,7 +554,7 @@
                                 <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                                     <li>
                                         <a wire:click='customer_logout'
-                                            class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                            class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer">Sign
                                             out</a>
                                     </li>
                                 </ul>
@@ -562,7 +562,7 @@
                                 <ul class="text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                                     <li>
                                         <a @click="open_user=false" wire:click="open_login_model" role="button"
-                                            class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                            class="block py-2 px-4 text-sm hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-600 dark:hover:text-white">Sign
                                             In</a>
                                     </li>
                                 </ul>

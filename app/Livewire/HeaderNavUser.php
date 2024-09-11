@@ -23,7 +23,8 @@ class HeaderNavUser extends Component
 
     public $cart_items, $customer;
 
-    public function mount()
+    #[On('boot_customer')]
+    public function boot()
     {
         $this->customer = Auth::guard('customer')->user();
         if ($this->customer) {
@@ -34,17 +35,17 @@ class HeaderNavUser extends Component
             $this->cart_items = collect();
         }
     }
-    public function add_to_cart($cart_item)
+    public function add_to_cart($type, $code, $name, $price)
     {
         if ($this->customer) {
             try {
                 AddToCart::updateorcreate([
                     'customer_id' => $this->customer->id,
-                    'service_category' => $cart_item['service_type'],
-                    'service_code' => $cart_item['service_code'],
-                    'service_name' => $cart_item['service_name'],
-                    'price_per_unit' => $cart_item['original_price'],
-                    'service_price' => $cart_item['original_price'],
+                    'service_category' => $type,
+                    'service_code' => $code,
+                    'service_name' => $name,
+                    'price_per_unit' => $price,
+                    'service_price' => $price,
                 ]);
                 $this->dispatch('increase_counter');
                 session()->flash('cart_success_msg', 'Service Added to cart...');
@@ -58,12 +59,12 @@ class HeaderNavUser extends Component
     #[On('increase_counter')]
     public function increase_counter()
     {
-        $this->cart_counter++;
+        $this->cart_counter + 1;
     }
     #[On('decrease_counter')]
     public function decrease_counter()
     {
-        $this->cart_counter--;
+        $this->cart_counter - 1;
     }
 
     #[On('open_login_model')]
@@ -109,6 +110,7 @@ class HeaderNavUser extends Component
                 }
                 session()->flash('login_success_msg', 'Logged in successfully...');
                 $this->close_login_model();
+                $this->dispatch('boot_customer');
             } catch (\Throwable $th) {
                 session()->flash('login_failure_msg', "Something went wrong in login.");
             }
