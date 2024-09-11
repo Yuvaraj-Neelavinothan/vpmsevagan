@@ -2,12 +2,14 @@
 
 namespace App\Livewire;
 
+use App\Models\ProWorkerModel;
 use Livewire\Component;
 
 class ProWorkerUser extends HeaderNavUser
 {
     public function render()
     {
-        return view('livewire.pro-worker-user');
+        $proworkers = ProWorkerModel::all();
+        return view('livewire.pro-worker-user', ['proworkers' => $proworkers]);
     }
 }

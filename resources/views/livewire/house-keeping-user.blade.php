@@ -148,5 +148,4 @@
             </div>
         </div>
     </section>
-    {{-- @include('customer-login-model') --}}
 </div>
