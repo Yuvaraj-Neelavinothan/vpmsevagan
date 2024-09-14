@@ -10,4 +10,8 @@ class FooterController extends Controller
     {
         return view('about-us-view');
     }
+    public function career()
+    {
+        return view('career-view');
+    }
 }

@@ -4,7 +4,7 @@
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="" class="flex items-center">
-                        <img src="{{ asset('images/sevagan_logo.png') }}" class="h-8 me-3 rounded-full"
+                        <img src="{{ asset('images/sevagan_logo.png') }}" class="border-2 border-green-800 h-8 me-3 rounded-full"
                             alt="Sevagan Logo" />
                         <h1 class="text-2xl font-bold text-gray-600 dark:text-white">Sevagan<small
                                 class="ms-2 font-semibold text-gray-500 dark:text-gray-400"></small>
@@ -19,13 +19,13 @@
                                 <a href="{{ route('aboutUs') }}" class="hover:underline">About Us</a>
                             </li>
                             <li class="mb-4">
-                                <a href="https://tailwindcss.com/" class="hover:underline">Career</a>
+                                <a href="{{ route('career') }}" class="hover:underline">Career</a>
                             </li>
                             <li class="mb-4">
-                                <a href="https://tailwindcss.com/" class="hover:underline">Scan QR</a>
+                                <a href="" class="hover:underline">Scan QR</a>
                             </li>
                             <li class="mb-4">
-                                <a href="https://tailwindcss.com/" class="hover:underline">Contact Us</a>
+                                <a href="" class="hover:underline">Contact Us</a>
                             </li>
                         </ul>
                     </div>

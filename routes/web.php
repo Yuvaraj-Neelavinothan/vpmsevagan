@@ -24,6 +24,7 @@ Route::get('/construction-work', [HomeController::class, 'construction_work'])->
 Route::get('/other-services', [HomeController::class, 'other_services'])->name('other_services');
 // footer
 Route::get('/about-us', [FooterController::class, 'about_us'])->name('aboutUs');
+Route::get('/career', [FooterController::class, 'career'])->name('career');
 
 // Admin login
 Route::get('/admin', [SuperAdminController::class, 'admin_login'])->name('adminLogin')->middleware('guest');
