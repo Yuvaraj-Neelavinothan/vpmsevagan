@@ -2,20 +2,6 @@
 
 
     <main class="p-4 h-auto pt-20 mt-7">
-        {{-- welcome quotes --}}
-        <div class="py-2 px-4 mx-auto max-w-screen-xl text-center lg:py-4 z-10 relative">
-            <a href="#"
-                class="inline-flex justify-between items-center py-1 px-1 pe-4 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
-                <span class="text-sm font-medium">our service experts will be knocking on your door,At your
-                    fingertips.</span>
-                <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 9 4-4-4-4" />
-                </svg>
-            </a>
-        </div>
-
         {{-- booking stepper --}}
         <ol
             class="flex items-center w-full p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm dark:text-gray-400 sm:text-base dark:bg-gray-800 dark:border-gray-700 sm:p-4 sm:space-x-4 rtl:space-x-reverse">
@@ -51,6 +37,35 @@
                 Pay after Service Satisfaction
             </li>
         </ol>
+        {{-- welcome image --}}
+        <div class="m-2">
+            <figure
+                class="relative max-w-sm md:max-w-md lg:max-w-lg transition-all duration-300 cursor-pointer filter mx-auto">
+                <a href="#">
+                    <img class="rounded-lg" src="{{ asset('images/welcomeimg.jpg') }}" alt="image description">
+                </a>
+                <figcaption class="absolute px-4 text-lg text-white bottom-6">
+                    <p class="text-center font-semibold">Services Available in surrounding 10kms areas of Villupuram,
+                        Vikkravandi, Tindivanam and
+                        Gingee...</p>
+                </figcaption>
+            </figure>
+        </div>
+        {{-- welcome quotes --}}
+        {{-- <div class="py-2 px-4 mx-auto max-w-screen-xl text-center lg:py-4 z-10 relative">
+            <a href="#"
+                class="inline-flex justify-between items-center py-1 px-1 pe-4 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
+                <span class="text-sm font-medium">our service experts will be knocking on your door,At your
+                    fingertips.</span>
+                <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+            </a>
+        </div> --}}
+
+
 
 
         {{-- House Keeping Service --}}

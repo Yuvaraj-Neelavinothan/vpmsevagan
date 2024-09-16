@@ -5,8 +5,8 @@
         <div class="flex justify-between items-center">
             <div class="flex justify-start items-center">
                 <a href="" class="flex items-center justify-between mr-3">
-                    <img src="{{ asset('images/sevagan_logo.png') }}" class="border-2 border-white mr-1 h-10 rounded-full"
-                        alt="sevagan Logo" />
+                    <img src="{{ asset('images/sevagan_logo.png') }}"
+                        class="border-2 border-green-500 mr-1 h-10 rounded-full" alt="sevagan Logo" />
                     <h1 class="text-3xl font-extrabold text-gray-500 dark:text-white">Sevagan<small
                             class="ms-2 font-semibold text-gray-500 dark:text-gray-400"></small>
                     </h1>
