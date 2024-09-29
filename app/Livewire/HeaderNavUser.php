@@ -18,6 +18,8 @@ class HeaderNavUser extends Component
     public $mobile_number;
     public $otp_receive, $otp_sent;
     public bool $is_open_login = false;
+    public bool $is_cart_open = false;
+    public bool $is_drawer_open = false;
     #[Session]
     public $cart_counter;
 
@@ -78,6 +80,23 @@ class HeaderNavUser extends Component
         $this->is_open_login = false;
         $this->reset();
         $this->resetValidation();
+    }
+    public function open_cart_services()
+    {
+        if ($this->is_cart_open) {
+            $this->is_cart_open = false;
+        } else {
+            $this->is_cart_open = true;
+        }
+    }
+    public function close_cart_services()
+    {
+        $this->is_cart_open = false;
+        $this->is_drawer_open = true;
+    }
+    public function close_drawer()
+    {
+        $this->is_drawer_open = false;
     }
 
     public function otp_generate()

@@ -71,7 +71,15 @@
         {{-- House Keeping Service --}}
         <div class="flex items-center justify-between mb-1">
             <a href="{{ route('house_keeping') }}" class="mx-auto">
-                <h4 class="title-1 font-bold  mx-auto text-gray-400 dark:text-white">House Keeping Services</h4>
+                <h4
+                    class="title-1 font-bold  mx-auto text-blue-500 border-b-2 border-blue-300 rounded-[2rem] p-2 dark:text-white flex items-center">
+                    House
+                    Keeping Services<svg class="w-4 h-4 md:w-6 md:h-6 ms-2 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </h4>
             </a>
         </div>
         <div
@@ -312,7 +320,14 @@
         {{-- Pro Workers Service --}}
         <div class="flex items-center justify-between mb-1">
             <a href="{{ route('pro_worker') }}" class="mx-auto">
-                <h4 class="title-1 font-bold  mx-auto text-gray-400 dark:text-white">Pro Worker Services</h4>
+                <h4
+                    class="title-1 font-bold  mx-auto text-blue-500 border-b-2 border-blue-300 rounded-[2rem] p-2 dark:text-white flex items-center">
+                    Pro Worker Services<svg class="w-4 h-4 md:w-6 md:h-6 ms-2 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </h4>
             </a>
         </div>
         <div class="flex items-center justify-center bg-gray-100">
@@ -356,7 +371,14 @@
         {{-- Water Wash Service --}}
         <div class="flex items-center justify-between mb-1">
             <a href="{{ route('water_wash') }}" class="mx-auto">
-                <h4 class="title-1 font-bold  mx-auto text-gray-400 dark:text-white">Water Wash Services</h4>
+                <h4
+                    class="title-1 font-bold  mx-auto text-blue-500 border-b-2 border-blue-300 rounded-[2rem] p-2 dark:text-white flex items-center">
+                    Water Wash Services<svg class="w-4 h-4 md:w-6 md:h-6 ms-2 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </h4>
             </a>
         </div>
         <div
@@ -428,7 +450,14 @@
         {{-- Construction Services --}}
         <div class="flex items-center justify-between mb-1">
             <a href="{{ route('construction_work') }}" class="mx-auto">
-                <h4 class="title-1 font-bold  mx-auto text-gray-400 dark:text-white">Construction Services</h4>
+                <h4
+                    class="title-1 font-bold  mx-auto text-blue-500 border-b-2 border-blue-300 rounded-[2rem] p-2 dark:text-white flex items-center">
+                    Construction Services<svg class="w-4 h-4 md:w-6 md:h-6 ms-2 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </h4>
             </a>
         </div>
         <div

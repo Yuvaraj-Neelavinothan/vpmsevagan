@@ -26,8 +26,8 @@
                 </button>
 
                 <!-- Add to cart services -->
-                <div x-data="{ open: false }" @click.outside="open = false" class="flex items-center lg:space-x-2">
-                    <button @click="open = !open" type="button"
+                <div class="flex items-center lg:space-x-2">
+                    <button type="button" wire:click="open_cart_services"
                         class="relative inline-flex items-center justify-center leading-none text-sm font-medium text-center p-1 shadow  mr-1 text-gray-500 rounded-full hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
                         <!-- cart icon -->
                         <svg class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -42,8 +42,8 @@
                                 {{ $cart_counter }}</div>
                         @endif
                     </button>
-                    @if ($cart_counter)
-                        <div x-show="open" @click.away="open = false"
+                    @if ($cart_counter && $is_cart_open)
+                        <div
                             class="absolute top-16 -end-0  z-10 mx-auto max-w-sm space-y-4 overflow-hidden rounded-lg bg-white p-4 antialiased shadow-lg dark:bg-gray-800">
                             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -117,7 +117,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="px-2 py-2 font-semibold text-gray-900 dark:text-white">
-                                                    &#8377;{{ $cart_item['service_price'] }}
+                                                    &#8377;{{ number_format($cart_item['service_price'], 0) }}
                                                 </td>
                                                 <td class="px-2 py-2">
                                                     <div class="ms-1">
@@ -154,11 +154,9 @@
                             </div>
                             <!-- drawer init and toggle -->
                             <div class="text-center">
-                                <button @click="open = false"
+                                <button wire:click="close_cart_services"
                                     class="text-white w-full bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-600 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
-                                    type="button" data-drawer-target="booking-service-drawer"
-                                    data-drawer-show="booking-service-drawer" data-drawer-placement="right"
-                                    aria-controls="booking-service-drawer">
+                                    type="button">
                                     Proceed to Checkout
                                 </button>
                             </div>
@@ -511,11 +509,11 @@
                                             class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">My
                                             profile</a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="#"
                                             class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Account
                                             settings</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                                 <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                                     <li>
@@ -530,8 +528,8 @@
                                             My likes</a>
                                     </li>
                                     <li>
-                                        <a href="#"
-                                            class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg
+                                        <a wire:click='open_cart_services' @click="open_user = false"
+                                            class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer"><svg
                                                 class="mr-2 w-6 h-6 text-gray-400 dark:text-white" aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 fill="currentColor" viewBox="0 0 24 24">
