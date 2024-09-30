@@ -1,11 +1,11 @@
 <div>
-    <footer class="bg-white dark:bg-gray-900">
+    <footer class="bg-gray-200 dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="" class="flex items-center">
-                        <img src="{{ asset('images/sevagan_logo.png') }}" class="border-2 border-green-800 h-8 me-3 rounded-full"
-                            alt="Sevagan Logo" />
+                        <img src="{{ asset('images/sevagan_logo.png') }}"
+                            class="border-2 border-green-800 h-8 me-3 rounded-full" alt="Sevagan Logo" />
                         <h1 class="text-2xl font-bold text-gray-600 dark:text-white">Sevagan<small
                                 class="ms-2 font-semibold text-gray-500 dark:text-gray-400"></small>
                         </h1>
@@ -30,13 +30,19 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="" class="hover:underline ">Github</a>
+                                <a href="{{ route('house_keeping') }}" class="hover:underline ">House Keeping</a>
                             </li>
-                            <li>
-                                <a href="" class="hover:underline">Discord</a>
+                            <li class="mb-4">
+                                <a href="{{ route('pro_worker') }}" class="hover:underline">Pro Worker</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="{{ route('water_wash') }}" class="hover:underline">Water Wash</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="{{ route('construction_work') }}" class="hover:underline">Construction</a>
                             </li>
                         </ul>
                     </div>
