@@ -35,6 +35,8 @@ Route::prefix('admin')->middleware('auth')->name('admin.')->group(function () {
     Route::get('/dashboard', [SuperAdminController::class, 'super_admin'])->name('dashboard');
     // bookings
     Route::get('/booking-services', [SuperAdminController::class, 'booking_services'])->name('bookings');
+    Route::get('/customers', [SuperAdminController::class, 'our_customers'])->name('customers');
+    Route::get('/applicant', [SuperAdminController::class, 'our_applicant'])->name('applicant');
     // masters
     Route::get('/service-categories', [SuperAdminController::class, 'service_category'])->name('serviceCategory');
     Route::get('/pro-worker', [SuperAdminController::class, 'pro_worker'])->name('proWorker');

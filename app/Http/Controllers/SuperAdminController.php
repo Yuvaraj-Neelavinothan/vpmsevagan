@@ -18,6 +18,14 @@ class SuperAdminController extends Controller
     {
         return view('booking-services-admin');
     }
+    public function our_customers()
+    {
+        return view('customers-admin');
+    }
+    public function our_applicant()
+    {
+        return view('applicant-admin');
+    }
     public function service_category()
     {
         return view('service-category-view');
