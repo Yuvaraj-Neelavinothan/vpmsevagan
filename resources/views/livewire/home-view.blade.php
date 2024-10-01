@@ -391,7 +391,8 @@
                         <div
                             class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
-                                <img class="rounded-t-lg" src="{{ asset('images/bikewash.jpg') }}" alt="" />
+                                <img class="rounded-t-lg" src="{{ asset('images/bikewash.jpeg') }}"
+                                    alt="" />
                             </a>
                             <div class="p-2">
                                 <p class="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">"Give
@@ -418,7 +419,7 @@
                         <div
                             class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
-                                <img class="rounded-t-lg" src="{{ asset('images/carwash.jpg') }}" alt="" />
+                                <img class="rounded-t-lg" src="{{ asset('images/carwash.jpeg') }}" alt="" />
                             </a>
                             <div class="p-2">
                                 <p class="mb-3 text-sm md:text-base md:font-normal text-gray-700 dark:text-gray-400">
