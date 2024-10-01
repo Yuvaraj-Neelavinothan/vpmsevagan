@@ -19,11 +19,17 @@
                 <input type="text" wire:model='service_street'
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     placeholder="type Street name">
+                    @error('service_street')
+                        <span class="error text-red-500">{{$message}}</span>
+                    @enderror
             </div>
             <div class="col-span-2">
                 <input type="text" wire:model='service_area'
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     placeholder="type Area/Village">
+                    @error('service_area')
+                        <span class="error text-red-500">{{$message}}</span>
+                    @enderror
             </div>
             <div class="col-span-2">
                 <select id="category" wire:model='service_city'
@@ -37,6 +43,9 @@
                     <option value="melmalaiyanur-mlr-604204">Melmalaiyanur</option>
                     <option value="kandachipuram-kdm-605701">Kandachipuram</option>
                 </select>
+                @error('service_city')
+                        <span class="error text-red-500">{{$message}}</span>
+                    @enderror
             </div>
         </div>
         <div class="flex items-center justify-center">

@@ -22,6 +22,7 @@ Route::get('/house-keeping', [HomeController::class, 'house_keeping'])->name('ho
 Route::get('/water-wash', [HomeController::class, 'water_wash'])->name('water_wash');
 Route::get('/construction-work', [HomeController::class, 'construction_work'])->name('construction_work');
 Route::get('/other-services', [HomeController::class, 'other_services'])->name('other_services');
+Route::get('/my-bookings', [HomeController::class, 'my_bookings'])->name('my_bookings');
 // footer
 Route::get('/about-us', [FooterController::class, 'about_us'])->name('aboutUs');
 Route::get('/career', [FooterController::class, 'career'])->name('career');

@@ -166,6 +166,11 @@ class HeaderNavUser extends Component
     }
     public function save_booking_service()
     {
+        $this->validate([
+            'service_street' => 'required',
+            'service_area' => 'required',
+            'service_city' => 'required',
+        ]);
         $current_date_time = now()->format('dmy_His');
         $booking_services = $this->cart_items;
         $city = $this->service_city;
@@ -189,11 +194,13 @@ class HeaderNavUser extends Component
                     'price_per_unit' => $b_service['price_per_unit'],
                     'quantity' => $b_service['quantity'],
                     'total_amount' => $b_service['service_price'],
+                    'booking_status'=>"Ongoing",
                 ]);
                 $delete_cart_item = AddToCart::findOrFail($b_service->id);
                 $delete_cart_item->delete();
             }
             $this->cart_counter = 0;
+            $this->is_drawer_open = false;
             session()->flash('booking_success_msg', "Your services are booked successfully.");
         } catch (\Throwable $th) {
             session()->flash('booking_failure_msg', "Something went wrong in booking services.");

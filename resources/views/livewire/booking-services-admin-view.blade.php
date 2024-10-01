@@ -16,6 +16,37 @@
         </div>
         <div
             class="flex flex-col flex-shrink-0 space-y-3 md:flex-row md:items-center lg:justify-end md:space-y-0 md:space-x-3">
+            {{-- filter --}}
+            <div class="mt-6 gap-4 space-y-4 sm:flex sm:items-center sm:space-y-0 lg:mt-0 lg:justify-end">
+                <div>
+                    <label for="order-type"
+                        class="sr-only mb-2 block text-sm font-medium text-gray-900 dark:text-white">Select order
+                        type</label>
+                    <select id="order-type"
+                        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 sm:w-[144px]">
+                        <option selected>All orders</option>
+                        <option value="ongoing">Ongoing</option>
+                        <option value="completed">Completed</option>
+                        <option value="denied">Denied</option>
+                    </select>
+                </div>
+
+                <span class="inline-block text-gray-500 dark:text-gray-400"> from </span>
+
+                <div>
+                    <label for="date"
+                        class="sr-only mb-2 block text-sm font-medium text-gray-900 dark:text-white">Select
+                        date</label>
+                    <select id="date"
+                        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 sm:w-[144px]">
+                        <option selected>this week</option>
+                        <option value="this month">this month</option>
+                        <option value="last 3 months">the last 3 months</option>
+                        <option value="lats 6 months">the last 6 months</option>
+                        <option value="this year">this year</option>
+                    </select>
+                </div>
+            </div>
             {{-- export --}}
             <button type="button"
                 class="flex items-center justify-center flex-shrink-0 px-3 py-2 text-sm font-medium text-gray-900 border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
@@ -48,18 +79,18 @@
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr class="bg-gray-200">
                             <th scope="col" class="p-4">S.no</th>
-                            <th scope="col" class="px-4 py-3">customer phone</th>
+                            <th scope="col" class="px-4 py-3">booking date</th>
                             <th scope="col" class="px-4 py-3">order id</th>
                             <th scope="col" class="px-4 py-3">category</th>
                             <th scope="col" class="px-4 py-3">code</th>
                             <th scope="col" class="px-4 py-3">service name</th>
+                            <th scope="col" class="px-4 py-3">customer phone</th>
                             <th scope="col" class="px-4 py-3">address</th>
                             <th scope="col" class="px-4 py-3">price/unit</th>
                             <th scope="col" class="px-4 py-3">quantity</th>
                             <th scope="col" class="px-4 py-3">total(&#8377;)</th>
                             <th scope="col" class="px-4 py-3">service status</th>
                             <th scope="col" class="px-4 py-3">payment status</th>
-                            <th scope="col" class="px-4 py-3">booking date</th>
                             <th scope="col" class="px-4 py-3">action</th>
                         </tr>
                     </thead>
@@ -74,7 +105,9 @@
                                 <td class="w-4 px-4 py-3">
                                     {{ $sno++ }}
                                 </td>
-                                <td class="px-4 py-2">{{ $b_service->customer->phone }}</td>
+                                <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    {{ \Carbon\Carbon::parse($b_service->created_at)->format('d M Y') }}
+                                </td>
                                 <td class="px-4 py-2">{{ $b_service->order_id }}</td>
                                 <td class="px-4 py-2">{{ $b_service->service_category }}</td>
                                 <td class="px-4 py-2">{{ $b_service->service_code }}</td>
@@ -82,6 +115,7 @@
                                     class="flex items-center px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     {{ $b_service->service_name }}
                                 </th>
+                                <td class="px-4 py-2">{{ $b_service->customer->phone }}</td>
                                 <td class="px-4 py-2">{{ $b_service->service_address }}
                                 </td>
                                 <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -94,14 +128,35 @@
                                     {{ $b_service->total_amount }}
                                 </td>
                                 <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {{ $b_service->booking_status }}
+                                    @if ($b_service->booking_status == 'Cancelled')
+                                        {{ $b_service->booking_status }}
+                                    @else
+                                        <select id="small"
+                                            wire:change="change_booking_status('{{ $b_service->id }}', $event.target.value)"
+                                            class="block p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                            <option value="Completed"
+                                                {{ $b_service->booking_status == 'Completed' ? 'selected' : '' }}>
+                                                Completed
+                                            </option>
+                                            <option value="Ongoing"
+                                                {{ $b_service->booking_status == 'Ongoing' ? 'selected' : '' }}>Ongoing
+                                            </option>
+                                        </select>
+                                    @endif
                                 </td>
                                 <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {{ $b_service->payment_status }}
+                                    <select id="small"
+                                        wire:change="change_payment_status('{{ $b_service->id }}', $event.target.value)"
+                                        class="block p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="Paid"
+                                            {{ $b_service->payment_status == 'Paid' ? 'selected' : '' }}>Paid
+                                        </option>
+                                        <option value="Unpaid"
+                                            {{ $b_service->payment_status == 'Unpaid' ? 'selected' : '' }}>Unpaid
+                                        </option>
+                                    </select>
                                 </td>
-                                <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {{ $b_service->created_at }}
-                                </td>
+
                                 <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     <div x-data="{ open: false }" class="relative">
                                         <button @click="open = !open"

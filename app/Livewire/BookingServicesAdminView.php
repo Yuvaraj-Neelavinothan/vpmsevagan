@@ -10,7 +10,26 @@ use Livewire\WithPagination;
 class BookingServicesAdminView extends Master
 {
     use WithPagination, WithoutUrlPagination;
-
+    public function change_booking_status($s_id, $b_status)
+    {
+        try {
+            $service = VpmServiceBooking::findOrFail($s_id);
+            $service->booking_status = $b_status;
+            $service->save();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
+    public function change_payment_status($s_id, $p_status)
+    {
+        try {
+            $service = VpmServiceBooking::findOrFail($s_id);
+            $service->payment_status = $p_status;
+            $service->save();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
     public function render()
     {
         if (!empty($this->search)) {

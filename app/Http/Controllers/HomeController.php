@@ -30,4 +30,8 @@ class HomeController extends Controller
     {
         return view('other-services-view');
     }
+    public function my_bookings()
+    {
+        return view('my-booking-view');
+    }
 }

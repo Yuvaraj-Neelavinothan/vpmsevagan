@@ -540,7 +540,7 @@
                                             My cart</a>
                                     </li>
                                     <li>
-                                        <a href="#"
+                                        <a href="{{ route('my_bookings') }}"
                                             class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg
                                                 class="mr-2 w-5 h-5 text-gray-400" fill="currentColor"
                                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
