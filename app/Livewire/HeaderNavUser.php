@@ -107,6 +107,19 @@ class HeaderNavUser extends Component
             'mobile_number.required' => 'Please enter Mobile Number.',
         ]);
         $this->otp_sent = mt_rand(100000, 999999);
+        $basic  = new \Vonage\Client\Credentials\Basic("242d43ee", "2CQLkb7MOhYhdqyq");
+        $client = new \Vonage\Client($basic);
+        $response = $client->sms()->send(
+            new \Vonage\SMS\Message\SMS("91".$this->mobile_number, "sevagan", 'Your one time password is: ' . $this->otp_sent)
+        );
+
+        $message = $response->current();
+
+        if ($message->getStatus() == 0) {
+            session()->flash('sms_sent', "The message was sent successfully");
+        } else {
+            session()->flash('sms_failed', "The message failed with status: " . $message->getStatus() . "\n");
+        }
     }
     public function verify_otp()
     {
@@ -194,7 +207,7 @@ class HeaderNavUser extends Component
                     'price_per_unit' => $b_service['price_per_unit'],
                     'quantity' => $b_service['quantity'],
                     'total_amount' => $b_service['service_price'],
-                    'booking_status'=>"Ongoing",
+                    'booking_status' => "Ongoing",
                 ]);
                 $delete_cart_item = AddToCart::findOrFail($b_service->id);
                 $delete_cart_item->delete();

@@ -213,7 +213,7 @@
                         </div> --}}
                     </div>
                 </div>
-                <div class="item mx-1">
+                {{-- <div class="item mx-1">
                     <div
                         class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex items-center justify-between space-x-2 flex-wrap">
@@ -225,7 +225,7 @@
                             <img class="p-2 rounded-[1rem]" src="{{ asset('images/urine_basin.jpg') }}"
                                 alt="product image" />
                         </a>
-                        {{-- <div class="p-2">
+                        <div class="p-2">
                             <div class="flex items-center justify-between space-x-2 flex-wrap">
                                 <span class="font-semibold text-gray-900 dark:text-white text-xs md:text-base">
                                     &#8377;599
@@ -235,9 +235,9 @@
                                     Book Now
                                 </button>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="item mx-1">
                     <div
                         class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
