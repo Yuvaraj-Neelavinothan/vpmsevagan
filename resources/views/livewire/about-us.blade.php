@@ -27,7 +27,7 @@
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Team</h2>
                 <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">"Our team is the heart of everything we do. Comprising highly skilled professionals from various fields, each member is handpicked for their expertise, dedication, and passion for delivering exceptional service."</p>
             </div>
-            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+            {{-- <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
                 <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
                     <a href="#">
                         <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
@@ -128,7 +128,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 </div>
