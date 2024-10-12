@@ -65,7 +65,7 @@
                         class="hover:underline">Sevagan™</a>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 sm:justify-center sm:mt-0">
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white mr-3">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 20 17">
                             <path fill-rule="evenodd"
@@ -74,7 +74,7 @@
                         </svg>
                         <span class="sr-only">Twitter page</span>
                     </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white mr-3">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 20 21">
                             <path fill-rule="evenodd"
@@ -83,7 +83,7 @@
                         </svg>
                         <span class="sr-only">Instagram page</span>
                     </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white mr-3">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 8 19">
                             <path fill-rule="evenodd"
