@@ -45,7 +45,8 @@
                     <img class="rounded-lg" src="{{ asset('images/welcomeimg.jpg') }}" alt="image description">
                 </a>
                 <figcaption class="absolute px-4 text-lg text-white bottom-6">
-                    <p class="text-center font-semibold">Services Available in surrounding 10kms areas of Villupuram,
+                    <p class="text-2xs md:text-base lg:text-lg text-center font-semibold">Services Available in surrounding 10kms
+                        areas of Villupuram,
                         Vikkravandi, Tindivanam and
                         Gingee...</p>
                 </figcaption>

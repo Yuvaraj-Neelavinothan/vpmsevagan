@@ -96,17 +96,20 @@
                 </div>
                 <div class="mt-3 flex items-center space-x-1">
                     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 font-semibold pr-1">
-                        Design & Developed by: </span><span
+                        Designed & Developed by: </span><span
                         class="text-sm text-gray-500 sm:text-center dark:text-gray-400 italic pr-2">Yuvaraj
                     </span>
-                    <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                        viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M5 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 italic">9976263186</span>
+                    <div x-data="{ p_no: false }" class="flex items-center space-x-2">
+                        <svg @click="p_no = !p_no" class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M5 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4Zm12 12V5H7v11h10Zm-5 1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span :class="{ 'hidden': !p_no }"
+                            class="text-sm text-gray-500 sm:text-center dark:text-gray-400 italic">9976263186</span>
+                    </div>
                 </div>
             </div>
         </div>
